@@ -1,26 +1,12 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "api/analyze.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "templates/index.html",
-      "use": "@vercel/static"
-    }
+    { "src": "app.py", "use": "@vercel/python" },
+    { "src": "templates/**", "use": "@vercel/static" },
+    { "src": "static/**", "use": "@vercel/static" }
   ],
   "routes": [
-    {
-      "src": "/api/analyze",
-      "dest": "api/analyze.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "templates/index.html"
-    }
-  ],
-  "env": {
-    "FLASK_ENV": "production"
-  }
+    { "src": "/api/(.*)", "dest": "app.py" },
+    { "src": "/(.*)", "dest": "templates/index.html" }
+  ]
 }
