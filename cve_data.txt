@@ -1,0 +1,9 @@
+CVE-2021-44228 (Log4Shell): Critical remote code execution vulnerability in Apache Log4j 2. Affected versions: 2.0-beta9 to 2.14.1. Attackers can execute arbitrary code via JNDI lookup in log messages. Patch: Upgrade to Log4j 2.15.0+. CVSS Score: 10.0 (Critical). Exploitation observed in wild since December 2021.
+
+CVE-2021-34527 (PrintNightmare): Windows Print Spooler remote code execution vulnerability. Allows attackers to run arbitrary code with SYSTEM privileges. Patch: Microsoft KB5004945. CVSS Score: 8.8 (High). Affects Windows 10/11 and Server editions.
+
+Heartbleed (CVE-2014-0160): OpenSSL memory disclosure vulnerability. Allows attackers to read 64KB chunks of server memory containing private keys, passwords. Affected: OpenSSL 1.0.1-1.0.1f. Patch: Upgrade to 1.0.1g+. CVSS Score: 7.5 (High). Discovered April 2014.
+
+CVE-2022-22965 (Spring4Shell): Critical RCE in Spring Framework. Exploits Java class binding via malicious request parameters. Affected: Spring Core 5.3.0-5.3.17, 5.2.0-5.2.19. Patch: Upgrade to 5.3.18+ or 5.2.20+. CVSS Score: 9.8 (Critical).
+
+Spectre (CVE-2017-5753): Speculative execution side-channel attack affecting modern CPUs. Allows reading arbitrary memory across privilege boundaries. Mitigation: Microcode updates + software patches. CVSS Score: 5.5 (Medium).
